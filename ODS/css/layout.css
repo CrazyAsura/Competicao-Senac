@@ -1,0 +1,157 @@
+/* Layout and positioning styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    margin-inline: 25%;
+    padding-block: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+#logo {
+    width: 60px;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#menu {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#menu-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+section {
+    margin-block: 30px;
+    padding: 0;
+}
+
+figure {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    max-width: 460px;
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+footer {
+    padding: 2rem;
+    text-align: start;
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-links {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive Layouts */
+@media (max-width: 600px) {
+    main {
+        margin-inline: 5%;
+        margin-block: 5%;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    
+    #menu-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    #menu-links.active {
+        display: block;
+    }
+
+    figure {
+        flex-direction: column;
+        gap: 1rem;
+        margin: 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    main {
+        margin-inline: 5%;
+    }
+
+    #menu-links {
+        gap: 1rem;
+    }
+
+    figure {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+
+    figure {
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+}

@@ -1,0 +1,46 @@
+/* Visual styles and other properties */
+#logo {
+    border-radius: 0;
+}
+
+#menu-links a {
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+#menu-links a:hover, 
+#menu-links a:focus {
+    text-decoration: underline;
+}
+
+section {
+    border-radius: 2rem;
+}
+
+figcaption h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+figcaption p, 
+figcaption li {
+    margin-bottom: 0.5rem;
+    margin: 30px;
+}
+
+img {
+    border-radius: 2rem;
+}
+clamp e media não vai ,tenho de aumentar largura e altura, como vou deixar imagens responsivas
+clamp
+mediaquerie
+max-width
+max-height
+@media (max-width: 600px) {
+    section {
+        border-radius: 1rem;
+        margin: 0;
+        padding: 0;
+    }
+}
+

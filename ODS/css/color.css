@@ -1,0 +1,44 @@
+/* Color-related styles */
+#menu {
+    background-color: #000;
+    color: #fff;
+}
+
+main, body{
+    background-color: white;
+    color: #000;
+}
+
+#menu-links a {
+    color: #fff;
+}
+
+.hamburger{
+    color: white;
+}
+
+#menu-links a:hover, 
+#menu-links a:focus {
+    color: #E3C097;
+}
+
+a:focus {
+    outline: 2px solid #E3C097;
+    outline-offset: 2px;
+}
+
+#dicas, 
+#ajuda {
+    background-color: #E3C097;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (hover: none) {
+    #menu-links a:active {
+        color: #E3C097;
+    }
+}
